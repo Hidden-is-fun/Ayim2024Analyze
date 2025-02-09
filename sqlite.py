@@ -31,7 +31,8 @@ DiffName    TEXT NOT NULL,
 SR      REAL NOT NULL,
 Drain   INTEGER NOT NULL,
 PassCount   INTEGER NOT NULL,
-PlayCount   INTEGER NOT NULL
+PlayCount   INTEGER NOT NULL,
+UpdateTime  DATETIME NOT NULL
 );''')
 c.execute('''
 CREATE TABLE IF NOT EXISTS DiffOwner(
@@ -49,8 +50,9 @@ c.execute('''
 CREATE TABLE IF NOT EXISTS User(
 ID      INTEGER PRIMARY KEY AUTOINCREMENT,
 UserID  INTEGER NOT NULL,
-Username    TEXT NOT NULL,
-Country     TEXT NOT NULL
+Username    TEXT,
+Country     TEXT,
+UpdateTime  DATETIME NOT NULL
 );''')
 c.execute('''
 CREATE TABLE IF NOT EXISTS UserAlias(

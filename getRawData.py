@@ -4,7 +4,6 @@ import os
 from datetime import datetime, timedelta
 from ossapi import Ossapi, GameMode
 from ossapi.enums import RankStatus, BeatmapsetSearchSort, BeatmapsetSearchExplicitContent
-
 import ossapiKey
 
 api = Ossapi(ossapiKey.client_id, ossapiKey.client_secret)
